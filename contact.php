@@ -307,7 +307,7 @@ if (isset($_GET["logout"])) {
                 // Verify the password
                 if (password_verify($password, $hashedPassword)) {
                     // Password is correct, proceed with login
-                    $_SESSION["username"] = row['$fname'];
+                    $_SESSION["username"] = $row['fname'];
                     echo '<div class="alert alert-success" role="alert">Login successful! You may now submit your message.</div>';
                 } else {
                     // Password is incorrect
